@@ -1,6 +1,6 @@
-# Deckmate
+# Topdeck
 
-Your sidekick for the 99. A set of Magic: The Gathering Commander tools:
+Brew smarter. Spend less. A set of Magic: The Gathering Commander tools:
 
 - **Penny Pincher**: build a full deck under a per-card price cap.
 - **Deck Doctor**: paste a list, get a checkup and a short list of cuts and adds.
@@ -19,10 +19,10 @@ npm run dev
 ## Brand
 
 - Name lives in `src/brand/brand.ts`.
-- Logo: `src/components/Logo.tsx` (mark + wordmark), favicon in `public/favicon.svg`.
+- Logo: `src/components/Logo.tsx` (a card lifted off a deck, plus wordmark), favicon in `public/favicon.svg`.
 - Fonts: Sora (display) and Inter (body), self-hosted via Fontsource.
 - Design tokens (colors, type, radii, motion) are CSS variables at the top of `src/index.css`.
 
 ![Home](docs/screenshots/home.png)
 
-Deckmate is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved or endorsed by Wizards.
+Topdeck is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved or endorsed by Wizards.

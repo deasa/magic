@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Logo } from './components/Logo'
 import { ArrowIcon, BackIcon } from './components/icons'
-import { APP_NAME, APP_TAGLINE } from './brand/brand'
+import { APP_NAME } from './brand/brand'
+import { HeroHand } from './components/HeroHand'
+import { PennyPreview, DoctorPreview } from './components/Previews'
 import { TOOLS, type Tool, type ToolId } from './tools'
 
 // Hash routing is enough until the tools have real screens.
@@ -29,6 +31,7 @@ export default function App() {
   return (
     <div className="shell">
       <div className="aurora" aria-hidden="true" />
+      <div className="dot-grid" aria-hidden="true" />
       <header className="topbar">
         <a href="#/" className="topbar-home" aria-label={`${APP_NAME} home`}>
           <Logo />
@@ -64,23 +67,78 @@ function ManaPips() {
   )
 }
 
+const ROLES = ['Ramp', 'Card draw', 'Removal', 'Board wipes', 'Synergy', 'Lands', 'Combos', 'Mana curve', 'Color fixing', 'Win cons']
+
+const STEPS = [
+  { n: '01', title: 'Pick a commander', body: 'Start from any legal commander, or paste a list you already play.' },
+  { n: '02', title: 'Set your rules', body: 'A max price per card, a total budget, a theme, a power level.' },
+  { n: '03', title: 'Get your 99', body: 'A full list or a short prescription, with a reason for every card.' },
+]
+
 function Home() {
   return (
     <>
       <section className="hero">
-        <p className="eyebrow">
-          <ManaPips /> Commander companion
-        </p>
-        <h1 className="hero-title">{APP_TAGLINE}</h1>
-        <p className="hero-sub">
-          Build a deck on a budget or give the one you have a checkup. Pick a tool to get started.
-        </p>
+        <div className="hero-copy">
+          <p className="eyebrow">
+            <ManaPips /> Commander tools
+          </p>
+          <h1 className="hero-title">
+            Brew smarter.
+            <br />
+            <span className="hero-title-accent">Spend less.</span>
+          </h1>
+          <p className="hero-sub">
+            Build a full Commander deck on any budget, or give the one you already play a checkup.
+          </p>
+          <div className="hero-actions">
+            <a href="#/penny-pincher" className="btn btn-primary">
+              Build on a budget <ArrowIcon />
+            </a>
+            <a href="#/deck-doctor" className="btn btn-ghost">
+              Check my deck
+            </a>
+          </div>
+        </div>
+        <HeroHand />
       </section>
 
-      <section className="tools" aria-label="Tools">
-        {TOOLS.map((t, i) => (
-          <ToolCard key={t.id} tool={t} index={i} />
-        ))}
+      <div className="marquee" aria-hidden="true">
+        <div className="marquee-track">
+          {[...ROLES, ...ROLES].map((r, i) => (
+            <span key={i} className="marquee-item">
+              <span className="marquee-diamond" /> {r}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <section className="section" aria-labelledby="tools-heading">
+        <div className="section-head">
+          <p className="section-kicker">The toolkit</p>
+          <h2 id="tools-heading" className="section-title">Two tools to start</h2>
+        </div>
+        <div className="tools">
+          {TOOLS.map((t, i) => (
+            <ToolCard key={t.id} tool={t} index={i} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="steps-heading">
+        <div className="section-head">
+          <p className="section-kicker">How it works</p>
+          <h2 id="steps-heading" className="section-title">From idea to decklist in three moves</h2>
+        </div>
+        <ol className="steps">
+          {STEPS.map((s) => (
+            <li key={s.n} className="step">
+              <span className="step-n">{s.n}</span>
+              <h3 className="step-title">{s.title}</h3>
+              <p className="step-body">{s.body}</p>
+            </li>
+          ))}
+        </ol>
       </section>
     </>
   )
@@ -118,6 +176,7 @@ function ToolPlaceholder({ tool }: { tool: Tool }) {
         <span className="tool-icon tool-icon-lg">{tool.icon}</span>
         <h1 className="placeholder-title">{tool.name}</h1>
         <p className="tool-pitch">{tool.pitch}</p>
+        {tool.id === 'penny-pincher' ? <PennyPreview /> : <DoctorPreview />}
         <div className="placeholder-status">
           <span className="status-dot" /> Under construction. This is where {tool.name} will live.
         </div>
