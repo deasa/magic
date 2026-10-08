@@ -1,6 +1,6 @@
 type IconProps = { size?: number }
 
-/** Penny Pincher: a coin with a price-tag notch. */
+/** Budget Builder: a coin with a price-tag notch. */
 export function CoinIcon({ size = 28 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -16,7 +16,7 @@ export function CoinIcon({ size = 28 }: IconProps) {
   )
 }
 
-/** Deck Doctor: a card with a heartbeat line across it. */
+/** Deck Analyzer: a card with a heartbeat line across it. */
 export function PulseCardIcon({ size = 28 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden="true">

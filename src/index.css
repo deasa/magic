@@ -694,7 +694,7 @@ a {
   }
 }
 
-/* ---------- Deck Doctor ---------- */
+/* ---------- Deck Analyzer ---------- */
 .btn-accent {
   color: #04211e;
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 70%, #fff), var(--accent));
@@ -720,24 +720,24 @@ button.btn-ghost {
   cursor: progress;
 }
 
-.doctor-head {
+.analyzer-head {
   display: flex;
   align-items: center;
   gap: 18px;
   margin-bottom: 24px;
 }
 
-.doctor-head .tool-icon {
+.analyzer-head .tool-icon {
   width: 64px;
   height: 64px;
   flex: none;
 }
 
-.doctor-head .placeholder-title {
+.analyzer-head .placeholder-title {
   margin: 0;
 }
 
-.doctor-head .tool-pitch {
+.analyzer-head .tool-pitch {
   margin: 0;
 }
 
@@ -1193,4 +1193,55 @@ button.btn-ghost {
   .summary-art {
     width: 120px;
   }
+}
+
+/* ---------- Saved decks ---------- */
+.saved {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-bottom: 16px;
+}
+
+.saved-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.saved-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+button.chip {
+  font: inherit;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.saved-remove {
+  margin-left: -6px;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--text-faint);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.saved-remove:hover {
+  color: var(--mana-r);
+}
+
+.btn-small {
+  margin-top: 16px;
+  padding: 8px 14px;
+  font-size: 13px;
 }
