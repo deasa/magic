@@ -1,11 +1,12 @@
 # Topdeck
 
-Brew smarter. Spend less. A set of Magic: The Gathering Commander tools:
+Pull up a chair. Let's talk decks. A set of Magic: The Gathering Commander tools:
 
-- **Penny Pincher**: build a full deck under a per-card price cap.
-- **Deck Doctor**: paste a list, get a checkup and a short list of cuts and adds.
-
-Both are placeholders for now; this is the app shell, brand and design system.
+- **Deck Doctor** (first version live): paste a decklist and get a checkup. It looks cards up on
+  Scryfall, checks deck size, bans, color identity and duplicates, counts lands, ramp, draw,
+  removal and wipes against typical ranges, draws the mana curve and color balance, and writes
+  a short prescription.
+- **Penny Pincher** (coming soon): build a full deck under a per-card price cap.
 
 ## Run it
 
@@ -14,7 +15,7 @@ npm install
 npm run dev
 ```
 
-`npm run build` type-checks and builds; `npm run lint` runs oxlint.
+`npm run build` type-checks and builds, `npm run lint` runs oxlint, `npm test` runs the unit tests.
 
 ## Brand
 
@@ -24,5 +25,7 @@ npm run dev
 - Design tokens (colors, type, radii, motion) are CSS variables at the top of `src/index.css`.
 
 ![Home](docs/screenshots/home.png)
+
+![Deck Doctor](docs/screenshots/doctor.png)
 
 Topdeck is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved or endorsed by Wizards.

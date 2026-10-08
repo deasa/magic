@@ -1,0 +1,1296 @@
+[
+ {
+  "name": "Ezuri, Renegade Leader",
+  "mana_cost": "{1}{G}{G}",
+  "cmc": 3,
+  "type_line": "Legendary Creature \u2014 Elf Warrior",
+  "oracle_text": "{G}: Regenerate another target Elf.\n{2}{G}{G}{G}: Elf creatures you control get +3/+3 and gain trample until end of turn.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.79"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Ezuri, Renegade Leader%22"
+ },
+ {
+  "name": "Sol Ring",
+  "mana_cost": "{1}",
+  "cmc": 1,
+  "type_line": "Artifact",
+  "oracle_text": "{T}: Add {C}{C}.",
+  "color_identity": [],
+  "produced_mana": [
+   "C"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "1.50"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Sol Ring%22"
+ },
+ {
+  "name": "Arcane Signet",
+  "mana_cost": "{2}",
+  "cmc": 2,
+  "type_line": "Artifact",
+  "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+  "color_identity": [],
+  "produced_mana": [
+   "W",
+   "U",
+   "B",
+   "R",
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.60"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Arcane Signet%22"
+ },
+ {
+  "name": "Llanowar Elves",
+  "mana_cost": "{G}",
+  "cmc": 1,
+  "type_line": "Creature \u2014 Elf Druid",
+  "oracle_text": "{T}: Add {G}.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Llanowar Elves%22"
+ },
+ {
+  "name": "Elvish Mystic",
+  "mana_cost": "{G}",
+  "cmc": 1,
+  "type_line": "Creature \u2014 Elf Druid",
+  "oracle_text": "{T}: Add {G}.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Mystic%22"
+ },
+ {
+  "name": "Fyndhorn Elves",
+  "mana_cost": "{G}",
+  "cmc": 1,
+  "type_line": "Creature \u2014 Elf Druid",
+  "oracle_text": "{T}: Add {G}.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.40"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Fyndhorn Elves%22"
+ },
+ {
+  "name": "Cultivate",
+  "mana_cost": "{2}{G}",
+  "cmc": 3,
+  "type_line": "Sorcery",
+  "oracle_text": "Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.25"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Cultivate%22"
+ },
+ {
+  "name": "Kodama's Reach",
+  "mana_cost": "{2}{G}",
+  "cmc": 3,
+  "type_line": "Sorcery \u2014 Arcane",
+  "oracle_text": "Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Kodama's Reach%22"
+ },
+ {
+  "name": "Rampant Growth",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Sorcery",
+  "oracle_text": "Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Rampant Growth%22"
+ },
+ {
+  "name": "Beast Whisperer",
+  "mana_cost": "{2}{G}{G}",
+  "cmc": 4,
+  "type_line": "Creature \u2014 Elf Druid",
+  "oracle_text": "Whenever you cast a creature spell, draw a card.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.40"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Beast Whisperer%22"
+ },
+ {
+  "name": "Guardian Project",
+  "mana_cost": "{3}{G}",
+  "cmc": 4,
+  "type_line": "Enchantment",
+  "oracle_text": "Whenever a nontoken creature you control enters, if it doesn't have the same name as another creature you control or a creature card in your graveyard, draw a card.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "1.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Guardian Project%22"
+ },
+ {
+  "name": "Harmonize",
+  "mana_cost": "{2}{G}{G}",
+  "cmc": 4,
+  "type_line": "Sorcery",
+  "oracle_text": "Draw three cards.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Harmonize%22"
+ },
+ {
+  "name": "Elvish Visionary",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Shaman",
+  "oracle_text": "When Elvish Visionary enters, draw a card.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Visionary%22"
+ },
+ {
+  "name": "Shamanic Revelation",
+  "mana_cost": "{3}{G}{G}",
+  "cmc": 5,
+  "type_line": "Sorcery",
+  "oracle_text": "Draw a card for each creature you control.\nFerocious \u2014 You gain 4 life for each creature you control with power 4 or greater.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.50"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Shamanic Revelation%22"
+ },
+ {
+  "name": "Return of the Wildspeaker",
+  "mana_cost": "{4}{G}",
+  "cmc": 5,
+  "type_line": "Instant",
+  "oracle_text": "Choose one \u2014\n\u2022 Draw cards equal to the greatest power among non-Human creatures you control.\n\u2022 Non-Human creatures you control get +3/+3 until end of turn.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.40"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Return of the Wildspeaker%22"
+ },
+ {
+  "name": "Beast Within",
+  "mana_cost": "{2}{G}",
+  "cmc": 3,
+  "type_line": "Instant",
+  "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Beast creature token.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.60"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Beast Within%22"
+ },
+ {
+  "name": "Ram Through",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Instant",
+  "oracle_text": "Target creature you control deals damage equal to its power to target creature you don't control.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Ram Through%22"
+ },
+ {
+  "name": "Krosan Grip",
+  "mana_cost": "{2}{G}",
+  "cmc": 3,
+  "type_line": "Instant",
+  "oracle_text": "Split second\nDestroy target artifact or enchantment.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.40"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Krosan Grip%22"
+ },
+ {
+  "name": "Elvish Archdruid",
+  "mana_cost": "{1}{G}{G}",
+  "cmc": 3,
+  "type_line": "Creature \u2014 Elf Druid",
+  "oracle_text": "Other Elf creatures you control get +1/+1.\n{T}: Add {G} for each Elf you control.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.80"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Archdruid%22"
+ },
+ {
+  "name": "Priest of Titania",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Druid",
+  "oracle_text": "{T}: Add {G} for each Elf on the battlefield.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "1.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Priest of Titania%22"
+ },
+ {
+  "name": "Elvish Champion",
+  "mana_cost": "{1}{G}{G}",
+  "cmc": 3,
+  "type_line": "Creature \u2014 Elf",
+  "oracle_text": "Other Elf creatures get +1/+1 and have forestwalk.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.50"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Champion%22"
+ },
+ {
+  "name": "Imperious Perfect",
+  "mana_cost": "{2}{G}",
+  "cmc": 3,
+  "type_line": "Creature \u2014 Elf Warrior",
+  "oracle_text": "Other Elf creatures you control get +1/+1.\n{G}, {T}: Create a 1/1 green Elf Warrior creature token.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.60"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Imperious Perfect%22"
+ },
+ {
+  "name": "Elvish Warmaster",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Warrior",
+  "oracle_text": "Whenever one or more other Elves you control enter, create a 1/1 green Elf Warrior creature token. This ability triggers only once each turn.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.50"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Warmaster%22"
+ },
+ {
+  "name": "Dwynen's Elite",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Warrior",
+  "oracle_text": "When Dwynen's Elite enters, if you control another Elf, create a 1/1 green Elf Warrior creature token.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Dwynen's Elite%22"
+ },
+ {
+  "name": "Lys Alana Huntmaster",
+  "mana_cost": "{2}{G}{G}",
+  "cmc": 4,
+  "type_line": "Creature \u2014 Elf Warrior",
+  "oracle_text": "Whenever you cast an Elf spell, you may create a 1/1 green Elf Warrior creature token.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Lys Alana Huntmaster%22"
+ },
+ {
+  "name": "Elvish Promenade",
+  "mana_cost": "{3}{G}",
+  "cmc": 4,
+  "type_line": "Tribal Sorcery \u2014 Elf",
+  "oracle_text": "Create a 1/1 green Elf Warrior creature token for each Elf you control.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Promenade%22"
+ },
+ {
+  "name": "Wellwisher",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf",
+  "oracle_text": "{T}: You gain 1 life for each Elf on the battlefield.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Wellwisher%22"
+ },
+ {
+  "name": "Ezuri's Brigade",
+  "mana_cost": "{2}{G}{G}",
+  "cmc": 4,
+  "type_line": "Creature \u2014 Elf Warrior",
+  "oracle_text": "Metalcraft \u2014 As long as you control three or more artifacts, Ezuri's Brigade gets +4/+4 and has trample.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Ezuri's Brigade%22"
+ },
+ {
+  "name": "Joraga Warcaller",
+  "mana_cost": "{G}",
+  "cmc": 1,
+  "type_line": "Creature \u2014 Elf Warrior",
+  "oracle_text": "Multikicker {1}{G}\nJoraga Warcaller enters with a +1/+1 counter on it for each time it was kicked.\nOther Elf creatures you control get +1/+1 for each +1/+1 counter on Joraga Warcaller.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Joraga Warcaller%22"
+ },
+ {
+  "name": "Craterhoof Behemoth",
+  "mana_cost": "{5}{G}{G}{G}",
+  "cmc": 8,
+  "type_line": "Creature \u2014 Beast",
+  "oracle_text": "Haste\nWhen Craterhoof Behemoth enters, creatures you control gain trample and get +X/+X until end of turn, where X is the number of creatures you control.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "19.50"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Craterhoof Behemoth%22"
+ },
+ {
+  "name": "Overrun",
+  "mana_cost": "{2}{G}{G}{G}",
+  "cmc": 5,
+  "type_line": "Sorcery",
+  "oracle_text": "Creatures you control get +3/+3 and gain trample until end of turn.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.40"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Overrun%22"
+ },
+ {
+  "name": "Triumph of the Hordes",
+  "mana_cost": "{2}{G}{G}",
+  "cmc": 4,
+  "type_line": "Sorcery",
+  "oracle_text": "Until end of turn, creatures you control get +1/+1 and gain trample and infect.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "2.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Triumph of the Hordes%22"
+ },
+ {
+  "name": "Elvish Clancaller",
+  "mana_cost": "{G}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Druid",
+  "oracle_text": "Other Elves you control get +1/+1.\n{4}{G}{G}, {T}: Search your library for a card named Elvish Clancaller, put it onto the battlefield, then shuffle.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Clancaller%22"
+ },
+ {
+  "name": "Allosaurus Shepherd",
+  "mana_cost": "{G}",
+  "cmc": 1,
+  "type_line": "Creature \u2014 Elf Shaman",
+  "oracle_text": "This spell can't be countered.\nGreen spells you control can't be countered.\n{4}{G}{G}: Until end of turn, each Elf creature you control has base power and toughness 5/5 and becomes a Dinosaur in addition to its other creature types.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "1.00"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Allosaurus Shepherd%22"
+ },
+ {
+  "name": "Steel Leaf Champion",
+  "mana_cost": "{G}{G}{G}",
+  "cmc": 3,
+  "type_line": "Creature \u2014 Elf Knight",
+  "oracle_text": "Steel Leaf Champion can't be blocked by creatures with power 2 or less.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Steel Leaf Champion%22"
+ },
+ {
+  "name": "Marwyn, the Nurturer",
+  "mana_cost": "{2}{G}",
+  "cmc": 3,
+  "type_line": "Legendary Creature \u2014 Elf Druid",
+  "oracle_text": "Whenever another Elf you control enters, put a +1/+1 counter on Marwyn, the Nurturer.\n{T}: Add an amount of {G} equal to Marwyn's power.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.50"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Marwyn, the Nurturer%22"
+ },
+ {
+  "name": "Timberwatch Elf",
+  "mana_cost": "{2}{G}",
+  "cmc": 3,
+  "type_line": "Creature \u2014 Elf",
+  "oracle_text": "{T}: Target creature gets +X/+X until end of turn, where X is the number of Elves on the battlefield.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Timberwatch Elf%22"
+ },
+ {
+  "name": "Elvish Harbinger",
+  "mana_cost": "{2}{G}",
+  "cmc": 3,
+  "type_line": "Creature \u2014 Elf Druid",
+  "oracle_text": "When Elvish Harbinger enters, you may search your library for an Elf card, reveal it, then shuffle and put that card on top.\n{T}: Add one mana of any color.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [
+   "W",
+   "U",
+   "B",
+   "R",
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.80"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Harbinger%22"
+ },
+ {
+  "name": "Heedless One",
+  "mana_cost": "{3}{G}",
+  "cmc": 4,
+  "type_line": "Creature \u2014 Elf Avatar",
+  "oracle_text": "Trample\nHeedless One's power and toughness are each equal to the number of Elves on the battlefield.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Heedless One%22"
+ },
+ {
+  "name": "Jagged-Scar Archers",
+  "mana_cost": "{1}{G}{G}",
+  "cmc": 3,
+  "type_line": "Creature \u2014 Elf Archer",
+  "oracle_text": "Jagged-Scar Archers's power and toughness are each equal to the number of Elves you control.\n{T}: Jagged-Scar Archers deals damage equal to its power to target creature with flying.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Jagged-Scar Archers%22"
+ },
+ {
+  "name": "Gaea's Herald",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf",
+  "oracle_text": "Creature spells can't be countered.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.60"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Gaea's Herald%22"
+ },
+ {
+  "name": "Elvish Piper",
+  "mana_cost": "{3}{G}",
+  "cmc": 4,
+  "type_line": "Creature \u2014 Elf Shaman",
+  "oracle_text": "{G}, {T}: You may put a creature card from your hand onto the battlefield.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "4.50"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Piper%22"
+ },
+ {
+  "name": "Regal Force",
+  "mana_cost": "{4}{G}{G}{G}",
+  "cmc": 7,
+  "type_line": "Creature \u2014 Elemental",
+  "oracle_text": "When Regal Force enters, draw a card for each green creature you control.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.80"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Regal Force%22"
+ },
+ {
+  "name": "Pathbreaker Ibex",
+  "mana_cost": "{4}{G}{G}",
+  "cmc": 6,
+  "type_line": "Creature \u2014 Goat",
+  "oracle_text": "Whenever Pathbreaker Ibex attacks, creatures you control gain trample and get +X/+X until end of turn, where X is the greatest power among creatures you control.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "1.40"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Pathbreaker Ibex%22"
+ },
+ {
+  "name": "End-Raze Forerunners",
+  "mana_cost": "{5}{G}{G}{G}",
+  "cmc": 8,
+  "type_line": "Creature \u2014 Boar",
+  "oracle_text": "Vigilance, trample, haste\nWhen End-Raze Forerunners enters, other creatures you control get +2/+2 and gain vigilance and trample until end of turn.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.50"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22End-Raze Forerunners%22"
+ },
+ {
+  "name": "Woodland Champion",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Scout",
+  "oracle_text": "Whenever one or more tokens you control enter, put that many +1/+1 counters on Woodland Champion.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Woodland Champion%22"
+ },
+ {
+  "name": "Thornweald Archer",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Archer",
+  "oracle_text": "Reach\nDeathtouch",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Thornweald Archer%22"
+ },
+ {
+  "name": "Eyeblight Assassin",
+  "mana_cost": "{2}{B}",
+  "cmc": 3,
+  "type_line": "Creature \u2014 Elf Assassin",
+  "oracle_text": "When Eyeblight Assassin enters, target creature an opponent controls gets -1/-1 until end of turn.",
+  "color_identity": [
+   "B"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Eyeblight Assassin%22"
+ },
+ {
+  "name": "Elvish Vanguard",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Warrior",
+  "oracle_text": "Whenever another Elf enters, put a +1/+1 counter on Elvish Vanguard.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Vanguard%22"
+ },
+ {
+  "name": "Wildheart Invoker",
+  "mana_cost": "{2}{G}{G}",
+  "cmc": 4,
+  "type_line": "Creature \u2014 Elf Shaman",
+  "oracle_text": "{8}: Target creature gets +5/+5 and gains trample until end of turn.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Wildheart Invoker%22"
+ },
+ {
+  "name": "Nissa, Who Shakes the World",
+  "mana_cost": "{3}{G}{G}",
+  "cmc": 5,
+  "type_line": "Legendary Planeswalker \u2014 Nissa",
+  "oracle_text": "Whenever you tap a Forest for mana, add an additional {G}.\n+1: Put three +1/+1 counters on up to one target noncreature land you control. Untap it. It becomes a 0/0 Elemental creature with vigilance and haste that's still a land.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "4.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Nissa, Who Shakes the World%22"
+ },
+ {
+  "name": "Primal Might",
+  "mana_cost": "{X}{G}",
+  "cmc": 1,
+  "type_line": "Sorcery",
+  "oracle_text": "Target creature you control gets +X/+X until end of turn. Then it fights up to one target creature you don't control.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.50"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Primal Might%22"
+ },
+ {
+  "name": "Pelakka Wurm",
+  "mana_cost": "{4}{G}{G}{G}",
+  "cmc": 7,
+  "type_line": "Creature \u2014 Wurm",
+  "oracle_text": "Trample\nWhen Pelakka Wurm enters, you gain 7 life.\nWhen Pelakka Wurm dies, draw a card.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Pelakka Wurm%22"
+ },
+ {
+  "name": "Hunting Wilds",
+  "mana_cost": "{3}{G}",
+  "cmc": 4,
+  "type_line": "Sorcery",
+  "oracle_text": "Kicker {3}{G}\nSearch your library for up to two Forest cards, put them onto the battlefield tapped, then shuffle.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Hunting Wilds%22"
+ },
+ {
+  "name": "Elven Bow",
+  "mana_cost": "{G}",
+  "cmc": 1,
+  "type_line": "Artifact \u2014 Equipment",
+  "oracle_text": "Equipped creature gets +1/+2 and has reach.\nEquip {3}",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elven Bow%22"
+ },
+ {
+  "name": "Rhythm of the Wild",
+  "mana_cost": "{1}{R}{G}",
+  "cmc": 3,
+  "type_line": "Enchantment",
+  "oracle_text": "Creature spells you control can't be countered.\nNontoken creatures you control have riot.",
+  "color_identity": [
+   "R",
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.90"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Rhythm of the Wild%22"
+ },
+ {
+  "name": "Moldgraf Millipede",
+  "mana_cost": "{4}{G}",
+  "cmc": 5,
+  "type_line": "Creature \u2014 Insect Horror",
+  "oracle_text": "When Moldgraf Millipede enters, mill three cards.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Moldgraf Millipede%22"
+ },
+ {
+  "name": "Mirri's Guile",
+  "mana_cost": "{G}",
+  "cmc": 1,
+  "type_line": "Enchantment",
+  "oracle_text": "At the beginning of your upkeep, you may look at the top three cards of your library, then put them back in any order.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "1.80"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Mirri's Guile%22"
+ },
+ {
+  "name": "Sylvan Messenger",
+  "mana_cost": "{3}{G}{G}",
+  "cmc": 5,
+  "type_line": "Creature \u2014 Elf",
+  "oracle_text": "Trample\nWhen Sylvan Messenger enters, reveal the top four cards of your library. Put all Elf cards revealed this way into your hand and the rest on the bottom of your library in any order.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.20"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Sylvan Messenger%22"
+ },
+ {
+  "name": "Tyvar Kell",
+  "mana_cost": "{2}{G}{G}",
+  "cmc": 4,
+  "type_line": "Legendary Planeswalker \u2014 Tyvar",
+  "oracle_text": "Elves you control have \"{T}: Add {B}.\"\n+1: Put a +1/+1 counter on up to one target Elf.\n0: Create a 1/1 green Elf Warrior creature token.",
+  "color_identity": [
+   "B",
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "1.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Tyvar Kell%22"
+ },
+ {
+  "name": "Selvala, Heart of the Wilds",
+  "mana_cost": "{1}{G}{G}",
+  "cmc": 3,
+  "type_line": "Legendary Creature \u2014 Elf Scout",
+  "oracle_text": "Whenever another creature enters, its controller may draw a card if its power is greater than each other creature's power.\n{G}, {T}: Add X mana in any combination of colors, where X is the greatest power among creatures you control.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "3.50"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Selvala, Heart of the Wilds%22"
+ },
+ {
+  "name": "Leaf-Crowned Visionary",
+  "mana_cost": "{G}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Druid",
+  "oracle_text": "Other Elves you control get +1/+1.\nWhenever you cast an Elf spell, you may pay {G}. If you do, draw a card.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.40"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Leaf-Crowned Visionary%22"
+ },
+ {
+  "name": "Wirewood Symbiote",
+  "mana_cost": "{G}",
+  "cmc": 1,
+  "type_line": "Creature \u2014 Insect",
+  "oracle_text": "Return an Elf you control to its owner's hand: Untap target creature. Activate only once each turn.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.60"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Wirewood Symbiote%22"
+ },
+ {
+  "name": "Elvish Mimic",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Shapeshifter",
+  "oracle_text": "Changeling",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Elvish Mimic%22"
+ },
+ {
+  "name": "Sylvan Ranger",
+  "mana_cost": "{1}{G}",
+  "cmc": 2,
+  "type_line": "Creature \u2014 Elf Scout Ranger",
+  "oracle_text": "When Sylvan Ranger enters, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.10"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Sylvan Ranger%22"
+ },
+ {
+  "name": "Myriad Landscape",
+  "mana_cost": "",
+  "cmc": 0,
+  "type_line": "Land",
+  "oracle_text": "Myriad Landscape enters tapped.\n{T}: Add {C}.\n{2}, {T}, Sacrifice Myriad Landscape: Search your library for up to two basic land cards that share a land type, put them onto the battlefield tapped, then shuffle.",
+  "color_identity": [],
+  "produced_mana": [
+   "C"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.40"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Myriad Landscape%22"
+ },
+ {
+  "name": "Rogue's Passage",
+  "mana_cost": "",
+  "cmc": 0,
+  "type_line": "Land",
+  "oracle_text": "{T}: Add {C}.\n{4}, {T}: Target creature can't be blocked this turn.",
+  "color_identity": [],
+  "produced_mana": [
+   "C"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Rogue's Passage%22"
+ },
+ {
+  "name": "Path of Ancestry",
+  "mana_cost": "",
+  "cmc": 0,
+  "type_line": "Land",
+  "oracle_text": "Path of Ancestry enters tapped.\n{T}: Add one mana of any color in your commander's color identity.",
+  "color_identity": [],
+  "produced_mana": [
+   "W",
+   "U",
+   "B",
+   "R",
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Path of Ancestry%22"
+ },
+ {
+  "name": "Command Tower",
+  "mana_cost": "",
+  "cmc": 0,
+  "type_line": "Land",
+  "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+  "color_identity": [],
+  "produced_mana": [
+   "W",
+   "U",
+   "B",
+   "R",
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.30"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Command Tower%22"
+ },
+ {
+  "name": "Forest",
+  "mana_cost": "",
+  "cmc": 0,
+  "type_line": "Basic Land \u2014 Forest",
+  "oracle_text": "({T}: Add {G}.)",
+  "color_identity": [
+   "G"
+  ],
+  "produced_mana": [
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "prices": {
+   "usd": "0.05"
+  },
+  "scryfall_uri": "https://scryfall.com/search?q=!%22Forest%22"
+ }
+]

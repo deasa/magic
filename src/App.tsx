@@ -3,10 +3,11 @@ import { Logo } from './components/Logo'
 import { ArrowIcon, BackIcon } from './components/icons'
 import { APP_NAME } from './brand/brand'
 import { ManaWheel } from './components/ManaWheel'
-import { PennyPreview, DoctorPreview } from './components/Previews'
+import { PennyPreview } from './components/Previews'
+import { DeckDoctor } from './deck-doctor/DeckDoctor'
 import { TOOLS, type Tool, type ToolId } from './tools'
 
-// Hash routing is enough until the tools have real screens.
+// Hash routing is enough for a handful of screens.
 function useRoute(): ToolId | null {
   const read = () => {
     const id = window.location.hash.replace('#/', '')
@@ -45,7 +46,9 @@ export default function App() {
         </nav>
       </header>
 
-      <main className="main">{tool ? <ToolPlaceholder tool={tool} /> : <Home />}</main>
+      <main className="main">
+        {route === 'deck-doctor' ? <DeckDoctor /> : tool ? <ToolPlaceholder tool={tool} /> : <Home />}
+      </main>
 
       <footer className="footer">
         <span>
@@ -108,7 +111,7 @@ function ToolPlaceholder({ tool }: { tool: Tool }) {
         <span className="tool-icon tool-icon-lg">{tool.icon}</span>
         <h1 className="placeholder-title">{tool.name}</h1>
         <p className="tool-pitch">{tool.pitch}</p>
-        {tool.id === 'penny-pincher' ? <PennyPreview /> : <DoctorPreview />}
+        <PennyPreview />
         <div className="placeholder-status">
           <span className="status-dot" /> Under construction. This is where {tool.name} will live.
         </div>

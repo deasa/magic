@@ -1,4 +1,4 @@
-// Static mockups that hint at each tool's UI on its placeholder page.
+// Static mockup that hints at Penny Pincher's UI on its placeholder page.
 
 const CATEGORIES = [
   { name: 'Lands', count: 36, pct: 22 },
@@ -31,33 +31,6 @@ export function PennyPreview() {
           </span>
         ))}
       </div>
-    </div>
-  )
-}
-
-const VITALS = [
-  { name: 'Land count', value: 34, target: 36, max: 42 },
-  { name: 'Ramp', value: 7, target: 10, max: 15 },
-  { name: 'Card draw', value: 11, target: 10, max: 15 },
-  { name: 'Removal', value: 4, target: 8, max: 15 },
-]
-
-export function DoctorPreview() {
-  return (
-    <div className="preview" aria-hidden="true">
-      {VITALS.map((v) => {
-        const low = v.value < v.target - 1
-        return (
-          <div key={v.name} className="vital">
-            <span className="preview-label">{v.name}</span>
-            <span className="vital-bar">
-              <span className={`vital-fill${low ? ' low' : ''}`} style={{ width: `${(v.value / v.max) * 100}%` }} />
-              <span className="vital-target" style={{ left: `${(v.target / v.max) * 100}%` }} />
-            </span>
-            <span className={`vital-value${low ? ' low' : ''}`}>{v.value}</span>
-          </div>
-        )
-      })}
     </div>
   )
 }
