@@ -3,8 +3,8 @@ import { Logo } from './components/Logo'
 import { ArrowIcon, BackIcon } from './components/icons'
 import { APP_NAME } from './brand/brand'
 import { ManaWheel } from './components/ManaWheel'
-import { PennyPreview } from './components/Previews'
-import { DeckDoctor } from './deck-doctor/DeckDoctor'
+import { BudgetPreview } from './components/Previews'
+import { DeckAnalyzer } from './deck-analyzer/DeckAnalyzer'
 import { TOOLS, type Tool, type ToolId } from './tools'
 
 // Hash routing is enough for a handful of screens.
@@ -47,7 +47,7 @@ export default function App() {
       </header>
 
       <main className="main">
-        {route === 'deck-doctor' ? <DeckDoctor /> : tool ? <ToolPlaceholder tool={tool} /> : <Home />}
+        {route === 'deck-analyzer' ? <DeckAnalyzer /> : tool ? <ToolPlaceholder tool={tool} /> : <Home />}
       </main>
 
       <footer className="footer">
@@ -111,7 +111,7 @@ function ToolPlaceholder({ tool }: { tool: Tool }) {
         <span className="tool-icon tool-icon-lg">{tool.icon}</span>
         <h1 className="placeholder-title">{tool.name}</h1>
         <p className="tool-pitch">{tool.pitch}</p>
-        <PennyPreview />
+        <BudgetPreview />
         <div className="placeholder-status">
           <span className="status-dot" /> Under construction. This is where {tool.name} will live.
         </div>

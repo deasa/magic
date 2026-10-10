@@ -7,13 +7,12 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# Deploys happen on Vercel through its GitHub integration; this only checks the code.
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -26,20 +25,4 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
-      # Relative base so the site works under /magic/ on GitHub Pages; hash routing needs no rewrites.
-      - run: npx vite build --base=./ && npx tsc -b
-      - if: github.event_name == 'push'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-  deploy:
-    if: github.event_name == 'push'
-    needs: check
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - run: npm run build
