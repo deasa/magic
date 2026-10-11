@@ -33,14 +33,22 @@ npx vercel dev     # front end plus the api/ functions (needs .env.local, see .e
 `npm run build` type-checks and builds, `npm run lint` runs oxlint, `npm test` runs the unit tests
 (the server tests use an in-memory libSQL database).
 
-## Set up hosting (one time)
+## Deploys
 
-1. **Vercel:** import `deasa/magic` at vercel.com/new. It detects Vite; keep the defaults.
-2. **Turso:** create a database at app.turso.tech, then create a token for it. In the Vercel project,
-   add `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` under Settings, Environment Variables.
-3. **Blob:** in the Vercel project, open Storage, create a Blob store and connect it. Vercel adds
-   `BLOB_READ_WRITE_TOKEN` for you.
-4. Redeploy, then open `/api/health`; both entries should say `ok`.
+CI (`.github/workflows/ci.yml`) runs lint, tests and build, then deploys with the Vercel CLI: every pull
+request gets a preview deploy (the URL is in the run summary) and every push to `main` goes to production.
+
+Hosting is already set up. To recreate it from scratch with the CLIs:
+
+1. **Vercel:** `npx vercel link --yes --project topdeck`.
+2. **Blob:** `npx vercel blob create-store topdeck-blob --access public --yes` creates the store, connects
+   it and adds `BLOB_READ_WRITE_TOKEN`.
+3. **Turso:** `turso db create topdeck`, then add `TURSO_DATABASE_URL` (`turso db show topdeck --url`) and
+   `TURSO_AUTH_TOKEN` (`turso db tokens create topdeck`) with `npx vercel env add` for production,
+   preview and development.
+4. **GitHub:** set the `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` repo variables (from `.vercel/project.json`)
+   and a `VERCEL_TOKEN` repo secret (create the token at vercel.com/account/tokens).
+5. Open `/api/health`; both entries should say `ok`.
 
 ## Brand
 
