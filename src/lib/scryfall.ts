@@ -55,9 +55,30 @@ export type Lookup = { cards: Map<string, Card>; notFound: string[] }
 
 export const nameKey = (name: string) => name.toLowerCase().split(' // ')[0].trim()
 
-/** Look up card names in batches. Keys in the result map are lowercased front-face names. */
+/**
+ * Look up card names. Goes through the app's /api/cards function (which caches in Turso) and
+ * falls back to calling Scryfall directly when that isn't available, e.g. under plain `vite dev`.
+ * Keys in the result map are lowercased front-face names.
+ */
 export async function fetchCards(names: string[], fetchImpl: typeof fetch = fetch): Promise<Lookup> {
   const unique = [...new Set(names)]
+  try {
+    const res = await fetchImpl('/api/cards', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ names: unique }),
+    })
+    if (res.ok) {
+      const json = (await res.json()) as { cards: RawCard[]; notFound: string[] }
+      return { cards: new Map(json.cards.map((r) => [nameKey(r.name), toCard(r)])), notFound: json.notFound }
+    }
+  } catch {
+    // Fall through to Scryfall.
+  }
+  return fetchFromScryfall(unique, fetchImpl)
+}
+
+async function fetchFromScryfall(unique: string[], fetchImpl: typeof fetch): Promise<Lookup> {
   const cards = new Map<string, Card>()
   const notFound: string[] = []
   for (let i = 0; i < unique.length; i += BATCH) {

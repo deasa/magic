@@ -1,13 +1,14 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { fetchCards, type Lookup } from '../lib/scryfall'
 import { BackIcon, PulseCardIcon } from '../components/icons'
 import { analyze, canBeCommander, ROLE_LABELS, type Checkup, type DeckCard, type Role } from './analyze'
 import { parseDecklist, type Entry } from './parse'
+import { deleteDeck, listDecks, saveDeck, type SavedDeck } from '../lib/decks'
 import { SAMPLE_DECK } from './sample'
 
-const STORAGE_KEY = 'topdeck.deckDoctor.list'
+const STORAGE_KEY = 'topdeck.deckAnalyzer.list'
 
-function loadSaved() {
+function loadDraft() {
   try {
     return localStorage.getItem(STORAGE_KEY) ?? ''
   } catch {
@@ -15,7 +16,7 @@ function loadSaved() {
   }
 }
 
-function save(text: string) {
+function saveDraft(text: string) {
   try {
     localStorage.setItem(STORAGE_KEY, text)
   } catch {
@@ -29,10 +30,31 @@ type State =
   | { status: 'error'; message: string }
   | { status: 'done'; entries: Entry[]; lookup: Lookup }
 
-export function DeckDoctor() {
-  const [text, setText] = useState(loadSaved)
+export function DeckAnalyzer() {
+  const [text, setText] = useState(loadDraft)
   const [state, setState] = useState<State>({ status: 'idle' })
   const [commander, setCommander] = useState<string | undefined>()
+  // null means saved decks aren't available (no database connected, or running without the API).
+  const [decks, setDecks] = useState<SavedDeck[] | null>(null)
+
+  useEffect(() => {
+    listDecks().then(setDecks, () => setDecks(null))
+  }, [])
+
+  function load(deck: SavedDeck) {
+    setText(deck.list)
+    run(deck.list).then(() => setCommander(deck.commander ?? undefined))
+  }
+
+  async function remove(deck: SavedDeck) {
+    await deleteDeck(deck.id).catch(() => undefined)
+    setDecks((d) => d?.filter((x) => x.id !== deck.id) ?? null)
+  }
+
+  async function saveCurrent(name: string, cmd: string | null) {
+    const deck = await saveDeck(name, cmd, text)
+    setDecks((d) => [deck, ...(d ?? []).filter((x) => x.id !== deck.id)])
+  }
 
   async function run(list = text) {
     const entries = parseDecklist(list)
@@ -40,7 +62,7 @@ export function DeckDoctor() {
       setState({ status: 'error', message: 'Paste a decklist first, one card per line.' })
       return
     }
-    save(list)
+    saveDraft(list)
     setCommander(undefined)
     setState({ status: 'loading' })
     try {
@@ -57,20 +79,38 @@ export function DeckDoctor() {
   )
 
   return (
-    <section className="doctor accent-teal">
+    <section className="analyzer accent-teal">
       <a href="#/" className="back-link">
         <BackIcon /> All tools
       </a>
 
-      <div className="doctor-head">
+      <div className="analyzer-head">
         <span className="tool-icon">
           <PulseCardIcon />
         </span>
         <div>
-          <h1 className="placeholder-title">Deck Doctor</h1>
-          <p className="tool-pitch">Paste your list and we'll take a look.</p>
+          <h1 className="placeholder-title">Deck Analyzer</h1>
+          <p className="tool-pitch">Paste a decklist to see its strengths, gaps and anything that breaks the rules.</p>
         </div>
       </div>
+
+      {decks && decks.length > 0 && (
+        <div className="saved">
+          <span className="saved-label">Your decks</span>
+          <ul className="chips">
+            {decks.map((d) => (
+              <li key={d.id} className="saved-item">
+                <button className="chip" onClick={() => load(d)} disabled={state.status === 'loading'}>
+                  {d.name}
+                </button>
+                <button className="saved-remove" onClick={() => remove(d)} aria-label={`Delete ${d.name}`}>
+                  ×
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="panel intake">
         <label htmlFor="decklist" className="intake-label">
@@ -87,7 +127,7 @@ export function DeckDoctor() {
         />
         <div className="intake-actions">
           <button className="btn btn-accent" onClick={() => run()} disabled={state.status === 'loading'}>
-            {state.status === 'loading' ? 'Checking…' : 'Run checkup'}
+            {state.status === 'loading' ? 'Analyzing…' : 'Analyze deck'}
           </button>
           <button
             className="btn btn-ghost"
@@ -105,7 +145,12 @@ export function DeckDoctor() {
       </div>
 
       {checkup && state.status === 'done' && (
-        <Results checkup={checkup} commander={commander} onCommander={setCommander} />
+        <Results
+          checkup={checkup}
+          commander={commander}
+          onCommander={setCommander}
+          onSave={decks ? saveCurrent : undefined}
+        />
       )}
     </section>
   )
@@ -115,11 +160,14 @@ function Results({
   checkup,
   commander,
   onCommander,
+  onSave,
 }: {
   checkup: Checkup
   commander?: string
   onCommander: (name: string) => void
+  onSave?: (name: string, commander: string | null) => Promise<void>
 }) {
+  const [saveState, setSaveState] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
   const candidates = checkup.cards.filter((c) => canBeCommander(c.card)).map((c) => c.card.name)
   const cmd = checkup.commanders[0]
 
@@ -128,7 +176,7 @@ function Results({
       <div className="panel summary">
         {cmd?.image && <img className="summary-art" src={cmd.image} alt={cmd.name} loading="lazy" />}
         <div className="summary-body">
-          <span className="section-kicker">Checkup for</span>
+          <span className="section-kicker">Analysis of</span>
           <h2 className="summary-title">{checkup.commanders.map((c) => c.name).join(' + ') || 'Your deck'}</h2>
           <div className="summary-pips">
             {checkup.colorIdentity.map((c) => (
@@ -150,6 +198,24 @@ function Results({
             <Stat label="Avg mana value" value={checkup.avgManaValue.toFixed(2)} />
             <Stat label="Est. price" value={`$${Math.round(checkup.priceUsd).toLocaleString()}`} />
           </dl>
+          {onSave && (
+            <button
+              className="btn btn-ghost btn-small"
+              disabled={saveState === 'saving'}
+              onClick={async () => {
+                setSaveState('saving')
+                try {
+                  const names = checkup.commanders.map((c) => c.name)
+                  await onSave(names.join(' + ') || 'Untitled deck', names[0] ?? null)
+                  setSaveState('saved')
+                } catch {
+                  setSaveState('error')
+                }
+              }}
+            >
+              {{ idle: 'Save deck', saving: 'Saving…', saved: 'Saved', error: "Couldn't save. Try again" }[saveState]}
+            </button>
+          )}
         </div>
       </div>
 
@@ -168,7 +234,7 @@ function Results({
 
       <div className="results-grid">
         <div className="panel">
-          <h3 className="panel-title">The prescription</h3>
+          <h3 className="panel-title">Recommendations</h3>
           <ul className="notes">
             {checkup.notes.map((n) => (
               <li key={n.title} className={`note note-${n.tone}`}>

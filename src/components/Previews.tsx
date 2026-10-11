@@ -1,4 +1,4 @@
-// Static mockup that hints at Penny Pincher's UI on its placeholder page.
+// Static mockup that hints at Budget Builder's UI on its placeholder page.
 
 const CATEGORIES = [
   { name: 'Lands', count: 36, pct: 22 },
@@ -8,7 +8,7 @@ const CATEGORIES = [
   { name: 'Synergy', count: 35, pct: 30 },
 ]
 
-export function PennyPreview() {
+export function BudgetPreview() {
   return (
     <div className="preview" aria-hidden="true">
       <div className="preview-row">
