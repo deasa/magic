@@ -45,7 +45,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npx --yes vercel@54 pull --debug --yes --environment=$TARGET --token=$VERCEL_TOKEN
+      - run: npx --yes vercel@54 pull --yes --environment=$TARGET --token=$VERCEL_TOKEN
       - run: npx --yes vercel@54 build $([ "$TARGET" = production ] && echo --prod) --token=$VERCEL_TOKEN
       - id: deploy
         run: |
