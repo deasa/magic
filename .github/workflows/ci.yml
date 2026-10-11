@@ -12,7 +12,8 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-# Deploys happen on Vercel through its GitHub integration; this only checks the code.
+# Checks the code, then deploys with the Vercel CLI: a preview for each pull request and production
+# for pushes to main. Needs the VERCEL_TOKEN secret and the VERCEL_ORG_ID / VERCEL_PROJECT_ID variables.
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -26,3 +27,28 @@ jobs:
       - run: npm run lint
       - run: npm test
       - run: npm run build
+
+  deploy:
+    needs: check
+    # Pull requests from forks don't get secrets, so they stop at the checks.
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      TARGET: ${{ github.event_name == 'push' && 'production' || 'preview' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx --yes vercel@54 pull --yes --environment=$TARGET --token=$VERCEL_TOKEN
+      - run: npx --yes vercel@54 build $([ "$TARGET" = production ] && echo --prod) --token=$VERCEL_TOKEN
+      - id: deploy
+        run: |
+          url=$(npx --yes vercel@54 deploy --prebuilt $([ "$TARGET" = production ] && echo --prod) --token=$VERCEL_TOKEN)
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Deployed $TARGET: $url" >> "$GITHUB_STEP_SUMMARY"

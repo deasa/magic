@@ -49,8 +49,10 @@ npm run lint      # oxlint
 npm run build     # tsc -b (app, node and api configs) + vite build
 ```
 
-CI (`.github/workflows/ci.yml`) runs lint, test and build. Vercel deploys through its GitHub
-integration. Work goes through pull requests to `main`.
+CI (`.github/workflows/ci.yml`) runs lint, test and build, then deploys with the Vercel CLI: a preview
+for each pull request, production for pushes to `main`. It needs the `VERCEL_TOKEN` repo secret and the
+`VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` repo variables. The Vercel project is `topdeck`; its Blob store
+is `topdeck-blob`. Work goes through pull requests to `main`.
 
 ## Design
 
